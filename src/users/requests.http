@@ -1,8 +1,41 @@
+### Create new user
+
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "asdf@asdf.Com",
-    "password": "asdassdd",
+    "email": "email@test.com",
+    "password": "12345"
+}
+
+### Sign in as existing user
+
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "asdf10@as.Com",
+    "password": "kk",
     "asd": "assd"
+}
+
+### Find a particular user wuth a given ID
+
+GET http://localhost:3000/auth/2
+
+### Find all users with a given email
+
+GET http://localhost:3000/auth?email=asdf@asdf.Com
+
+### Delete
+
+DELETE http://localhost:3000/auth/133
+
+### Update
+
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "password": "cccca"
 }
